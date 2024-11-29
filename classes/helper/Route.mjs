@@ -107,8 +107,7 @@ const execute_debug = async (Controller, request) => {
 
   debugText += '<hr style="border-color:#666"/>';
 
-  result.body += '<div id="kohanajs-debug-panel" style="background-color: #000; color: #AAA; font-family: monospace; '
-    + `font-size: 12px; padding: 1em; position: relative; z-index: 9999;">${debugText}</div>`;
+  result.body += `<div class="fixed bottom-0 z-50 w-full"><input type="checkbox" id="debugger" class="peer hidden"><label for="debugger" class="text-xs bg-black text-white px-2 mx-2 rounded">Debug ON</label><div id="dev-panel" class="hidden peer-checked:block opacity-80 bg-black text-gray-400 font-mono text-xs p-4 w-full">${debugText}</div></div>`;
 
   return result;
 };
