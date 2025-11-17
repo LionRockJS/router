@@ -93,8 +93,8 @@ export default class RouteList {
         method,
         message,
         weight,
-        controller: '' as any,
-        action: '',
+        controller: undefined,
+        action: undefined,
       },
       'Stub Route Already added:',
     );

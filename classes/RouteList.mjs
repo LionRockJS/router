@@ -64,8 +64,8 @@ export default class RouteList {
             method,
             message,
             weight,
-            controller: '',
-            action: '',
+            controller: undefined,
+            action: undefined,
         }, 'Stub Route Already added:');
     }
     static remove(path, method = "GET") {
