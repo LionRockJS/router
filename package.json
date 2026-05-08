@@ -1,10 +1,10 @@
 {
   "name": "@lionrockjs/router",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "description": "LionRockJS Router to handle incoming requests",
   "module": "src/index.ts",
   "type": "module",
-  "main": "classes/index.js",
+  "main": "dist/index.js",
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",

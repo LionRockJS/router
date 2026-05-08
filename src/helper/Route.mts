@@ -100,11 +100,11 @@ const execute_debug = async (ControllerParam: ControllerClass, request: any): Pr
   debugText += benchmarkOutput;
   debugText += '<hr style="border-color:#666"/>';
 
-  debugText += DevUtils.printTable(Central.nodePackages, 'Node packages');
+  debugText += DevUtils.printTable(Central.modules, 'Node packages');
   debugText += '<hr style="border-color:#666"/>';
   debugText += DevUtils.printTable(Central.classPath, 'import files');
   debugText += '<hr style="border-color:#666"/>';
-  debugText += DevUtils.printList([...Central.viewPath.values()], 'Views');
+  debugText += DevUtils.printTable(Central.viewPath, 'Views');
   debugText += '<hr style="border-color:#666"/>';
 
   const config = Central.config;

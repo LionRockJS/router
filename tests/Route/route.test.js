@@ -1,5 +1,5 @@
 import {Controller} from '@lionrockjs/central';
-import RouteList from '../../classes/RouteList.mjs';
+import RouteList from '../../src/RouteList.mts';
 
 class ControllerTest extends Controller {
   async action_test() {
@@ -207,6 +207,6 @@ describe('Route Test', () => {
 
     const reply = await app.run('/hello-world/:id', 'POST');
     expect(reply.result.status).toBe(500);
-    expect(reply.result.body).toBe("Resolve path error: path controller/Missing.mjs not found. prefixPath: classes , store: {} ");
+    expect(reply.result.body).toBe("Resolve path error: path controller/Missing not found. prefixPath: classes , store: {} ");
   });
 });
