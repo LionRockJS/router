@@ -80,9 +80,11 @@ const execute_debug = async (ControllerParam, request) => {
     debugText += '<hr style="border-color:#666"/>';
     debugText += DevUtils.printTable(Central.modules, 'Node packages');
     debugText += '<hr style="border-color:#666"/>';
-    debugText += DevUtils.printTable(Central.classPath, 'import files');
+    debugText += DevUtils.printTable(Central.modelFiles, 'Models');
     debugText += '<hr style="border-color:#666"/>';
-    debugText += DevUtils.printTable(Central.viewPath, 'Views');
+    debugText += DevUtils.printTable(Central.viewFiles, 'Views');
+    debugText += '<hr style="border-color:#666"/>';
+    debugText += DevUtils.printTable(Central.controllerFiles, 'Controllers');
     debugText += '<hr style="border-color:#666"/>';
     const config = Central.config;
     debugText += `<details><summary>Core Config Values</summary><pre style="color:#777; display:inline; height: 5rem; overflow-y:scroll">${JSON.stringify(config, undefined, 2)}</pre></details>`;

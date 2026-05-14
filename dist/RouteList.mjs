@@ -95,14 +95,13 @@ export default class RouteList {
                 return;
             }
             routeAdapter.addRoute(app, route, async (request, reply, next = noop) => {
-                await Central.flushCache();
                 request.params.action = route.action;
                 request.params.controller = (typeof route.controller === 'string') ? route.controller : route.controller.name;
                 const execute = (Central.config.system?.debug === true) ?
                     HelperRoute.execute_debug :
                     HelperRoute.execute_production;
                 try {
-                    const controller = (typeof route.controller === 'string') ? await Central.import(route.controller) : route.controller;
+                    const controller = (typeof route.controller === 'string') ? await Central.resolveController(route.controller) : route.controller;
                     // separate controller.execute(request) to HelperRoute to allow add debugging information.
                     const result = await execute(controller, request);
                     // default result type is html
