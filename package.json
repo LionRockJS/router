@@ -1,6 +1,6 @@
 {
   "name": "@lionrockjs/router",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "LionRockJS Router to handle incoming requests",
   "module": "src/index.ts",
   "type": "module",
